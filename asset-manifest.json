@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d7c30075.chunk.css",
+    "main.js": "/static/js/main.117abdc8.chunk.js",
+    "main.js.map": "/static/js/main.117abdc8.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.8f7dd6aa.js",
+    "runtime-main.js.map": "/static/js/runtime-main.8f7dd6aa.js.map",
+    "static/js/2.1fe3d0c5.chunk.js": "/static/js/2.1fe3d0c5.chunk.js",
+    "static/js/2.1fe3d0c5.chunk.js.map": "/static/js/2.1fe3d0c5.chunk.js.map",
+    "static/js/3.e3136cd1.chunk.js": "/static/js/3.e3136cd1.chunk.js",
+    "static/js/3.e3136cd1.chunk.js.map": "/static/js/3.e3136cd1.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.d7c30075.chunk.css.map": "/static/css/main.d7c30075.chunk.css.map",
+    "static/js/2.1fe3d0c5.chunk.js.LICENSE.txt": "/static/js/2.1fe3d0c5.chunk.js.LICENSE.txt",
+    "static/media/Styles.scss": "/static/media/WorldMap_OSRS.537f1fa7.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8f7dd6aa.js",
+    "static/js/2.1fe3d0c5.chunk.js",
+    "static/css/main.d7c30075.chunk.css",
+    "static/js/main.117abdc8.chunk.js"
+  ]
+}
