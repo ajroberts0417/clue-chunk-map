@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/osrschunk/static/css/main.f25f8128.chunk.css",
-    "main.js": "/osrschunk/static/js/main.22a81352.chunk.js",
-    "main.js.map": "/osrschunk/static/js/main.22a81352.chunk.js.map",
+    "main.css": "/osrschunk/static/css/main.7b933701.chunk.css",
+    "main.js": "/osrschunk/static/js/main.13b670cb.chunk.js",
+    "main.js.map": "/osrschunk/static/js/main.13b670cb.chunk.js.map",
     "runtime-main.js": "/osrschunk/static/js/runtime-main.f8f59766.js",
     "runtime-main.js.map": "/osrschunk/static/js/runtime-main.f8f59766.js.map",
     "static/js/2.68e14f1b.chunk.js": "/osrschunk/static/js/2.68e14f1b.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.5a4c710a.chunk.js": "/osrschunk/static/js/3.5a4c710a.chunk.js",
     "static/js/3.5a4c710a.chunk.js.map": "/osrschunk/static/js/3.5a4c710a.chunk.js.map",
     "index.html": "/osrschunk/index.html",
-    "static/css/main.f25f8128.chunk.css.map": "/osrschunk/static/css/main.f25f8128.chunk.css.map",
+    "static/css/main.7b933701.chunk.css.map": "/osrschunk/static/css/main.7b933701.chunk.css.map",
     "static/js/2.68e14f1b.chunk.js.LICENSE.txt": "/osrschunk/static/js/2.68e14f1b.chunk.js.LICENSE.txt",
     "static/media/Styles.scss": "/osrschunk/static/media/WorldMap_OSRS.537f1fa7.png"
   },
   "entrypoints": [
     "static/js/runtime-main.f8f59766.js",
     "static/js/2.68e14f1b.chunk.js",
-    "static/css/main.f25f8128.chunk.css",
-    "static/js/main.22a81352.chunk.js"
+    "static/css/main.7b933701.chunk.css",
+    "static/js/main.13b670cb.chunk.js"
   ]
 }
