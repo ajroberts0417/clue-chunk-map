@@ -1,23 +1,26 @@
 {
   "files": {
-    "main.css": "/osrschunk/static/css/main.7e22e077.chunk.css",
-    "main.js": "/osrschunk/static/js/main.619eee6a.chunk.js",
-    "main.js.map": "/osrschunk/static/js/main.619eee6a.chunk.js.map",
-    "runtime-main.js": "/osrschunk/static/js/runtime-main.0b588f25.js",
-    "runtime-main.js.map": "/osrschunk/static/js/runtime-main.0b588f25.js.map",
-    "static/js/2.922aea36.chunk.js": "/osrschunk/static/js/2.922aea36.chunk.js",
-    "static/js/2.922aea36.chunk.js.map": "/osrschunk/static/js/2.922aea36.chunk.js.map",
-    "static/js/3.5499d752.chunk.js": "/osrschunk/static/js/3.5499d752.chunk.js",
-    "static/js/3.5499d752.chunk.js.map": "/osrschunk/static/js/3.5499d752.chunk.js.map",
+    "main.css": "/osrschunk/static/css/main.1c381c08.chunk.css",
+    "main.js": "/osrschunk/static/js/main.a9d2e43f.chunk.js",
+    "main.js.map": "/osrschunk/static/js/main.a9d2e43f.chunk.js.map",
+    "runtime-main.js": "/osrschunk/static/js/runtime-main.39fe182d.js",
+    "runtime-main.js.map": "/osrschunk/static/js/runtime-main.39fe182d.js.map",
+    "static/css/2.52805df1.chunk.css": "/osrschunk/static/css/2.52805df1.chunk.css",
+    "static/js/2.00304b29.chunk.js": "/osrschunk/static/js/2.00304b29.chunk.js",
+    "static/js/2.00304b29.chunk.js.map": "/osrschunk/static/js/2.00304b29.chunk.js.map",
+    "static/js/3.78223aea.chunk.js": "/osrschunk/static/js/3.78223aea.chunk.js",
+    "static/js/3.78223aea.chunk.js.map": "/osrschunk/static/js/3.78223aea.chunk.js.map",
     "index.html": "/osrschunk/index.html",
-    "static/css/main.7e22e077.chunk.css.map": "/osrschunk/static/css/main.7e22e077.chunk.css.map",
-    "static/js/2.922aea36.chunk.js.LICENSE.txt": "/osrschunk/static/js/2.922aea36.chunk.js.LICENSE.txt",
+    "static/css/2.52805df1.chunk.css.map": "/osrschunk/static/css/2.52805df1.chunk.css.map",
+    "static/css/main.1c381c08.chunk.css.map": "/osrschunk/static/css/main.1c381c08.chunk.css.map",
+    "static/js/2.00304b29.chunk.js.LICENSE.txt": "/osrschunk/static/js/2.00304b29.chunk.js.LICENSE.txt",
     "static/media/Styles.scss": "/osrschunk/static/media/WorldMap_OSRS.537f1fa7.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.0b588f25.js",
-    "static/js/2.922aea36.chunk.js",
-    "static/css/main.7e22e077.chunk.css",
-    "static/js/main.619eee6a.chunk.js"
+    "static/js/runtime-main.39fe182d.js",
+    "static/css/2.52805df1.chunk.css",
+    "static/js/2.00304b29.chunk.js",
+    "static/css/main.1c381c08.chunk.css",
+    "static/js/main.a9d2e43f.chunk.js"
   ]
 }
