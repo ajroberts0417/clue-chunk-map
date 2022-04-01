@@ -307,6 +307,17 @@ const Map: React.FC = () => {
       }
     }
 
+    // handle data transfers
+    if (query && query.t) {
+      const unlockedChunks = decompressUnlockedChunks(
+        width,
+        height,
+        query.t as string
+      );
+      localStorage.setItem(UNLOCKED_CHUNKS_KEY, JSON.stringify(unlockedChunks));
+      window.location.href = 'https://cluechunkmap.com';
+    }
+
     loadingRef.current = false;
   }, []);
 
