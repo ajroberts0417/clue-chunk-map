@@ -1,15 +1,20 @@
 {
   "files": {
-    "main.css": "/osrschunk/static/css/main.5968a92f.css",
-    "main.js": "/osrschunk/static/js/main.aa858dd5.js",
-    "static/js/787.2ec68d9c.chunk.js": "/osrschunk/static/js/787.2ec68d9c.chunk.js",
-    "index.html": "/osrschunk/index.html",
-    "main.5968a92f.css.map": "/osrschunk/static/css/main.5968a92f.css.map",
-    "main.aa858dd5.js.map": "/osrschunk/static/js/main.aa858dd5.js.map",
-    "787.2ec68d9c.chunk.js.map": "/osrschunk/static/js/787.2ec68d9c.chunk.js.map"
+    "main.css": "/static/css/main.3181783e.css",
+    "main.js": "/static/js/main.0af41da7.js",
+    "static/js/787.2ec68d9c.chunk.js": "/static/js/787.2ec68d9c.chunk.js",
+    "static/media/WorldMap_OSRS.png": "/static/media/WorldMap_OSRS.e403e8f32001e1053cc9.png",
+    "static/media/STASH_unit_(bush).png": "/static/media/STASH_unit_(bush).f8bd04519ca8a690e82f.png",
+    "static/media/STASH_unit_(rock).png": "/static/media/STASH_unit_(rock).6d2fda3c18c012e02da6.png",
+    "static/media/STASH_unit_(hole).png": "/static/media/STASH_unit_(hole).1b6d75199d5ddaee328f.png",
+    "static/media/STASH_unit_(crate).png": "/static/media/STASH_unit_(crate).0cb282bec13cf6582e5a.png",
+    "index.html": "/index.html",
+    "main.3181783e.css.map": "/static/css/main.3181783e.css.map",
+    "main.0af41da7.js.map": "/static/js/main.0af41da7.js.map",
+    "787.2ec68d9c.chunk.js.map": "/static/js/787.2ec68d9c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5968a92f.css",
-    "static/js/main.aa858dd5.js"
+    "static/css/main.3181783e.css",
+    "static/js/main.0af41da7.js"
   ]
 }
