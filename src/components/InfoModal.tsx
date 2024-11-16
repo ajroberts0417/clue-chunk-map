@@ -55,6 +55,7 @@ const InfoModal: React.FC = () => {
               <a
                 href="https://github.com/ConnorDY/clue-chunk-map/issues/new"
                 target="_blank"
+                rel="noreferrer"
               >
                 new issue
               </a>
@@ -67,7 +68,11 @@ const InfoModal: React.FC = () => {
 
       <p>
         The source code for this project can be found{' '}
-        <a href="https://github.com/ConnorDY/clue-chunk-map" target="_blank">
+        <a
+          href="https://github.com/ConnorDY/clue-chunk-map"
+          target="_blank"
+          rel="noreferrer"
+        >
           here
         </a>
         .
@@ -77,6 +82,7 @@ const InfoModal: React.FC = () => {
         <a
           href="https://github.com/ConnorDY/clue-chunk-map/issues/new"
           target="_blank"
+          rel="noreferrer"
         >
           let us know
         </a>

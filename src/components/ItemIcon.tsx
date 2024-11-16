@@ -22,10 +22,6 @@ const ItemIcon: React.FC<{ item: string }> = ({ item }) => {
     _setIconToShow(i);
   };
 
-  function nextIcon() {
-    setIconToShow((iconToShowRef.current + 1) % icons.length);
-  }
-
   // get the icon(s)
   useEffect(() => {
     if (Object.keys(itemSets).includes(item)) {
@@ -50,6 +46,11 @@ const ItemIcon: React.FC<{ item: string }> = ({ item }) => {
 
   // set or clear the interval
   useEffect(() => {
+
+    function nextIcon() {
+      setIconToShow((iconToShowRef.current + 1) % icons.length);
+    }
+
     if (icons.length > 1 && !iconInterval) {
       const _iconInterval = setInterval(() => {
         nextIcon();
@@ -72,13 +73,17 @@ const ItemIcon: React.FC<{ item: string }> = ({ item }) => {
 
   // if no icons, show the item name
   if (icons.length === 0) {
-    return <img className="loading-icon" src={loadingGif} aria-hidden />;
+    return <img className="loading-icon" src={loadingGif} aria-hidden alt={item} />;
   }
 
   // show the icon(s)
   return (
-    <a href={wikiPage} target="_blank">
-      <img src={`data:image/png;base64, ${icons[iconToShow]}`} title={item} />
+    <a href={wikiPage} target="_blank" rel="noreferrer">
+      <img
+        src={`data:image/png;base64, ${icons[iconToShow]}`}
+        title={item}
+        alt={item}
+      />
     </a>
   );
 };

@@ -30,7 +30,7 @@ export default forwardRef<
   const close = useCallback(() => {
     setIsOpen(false);
     if (onClose) onClose();
-  }, []);
+  }, [onClose]);
 
   useImperativeHandle(
     ref,

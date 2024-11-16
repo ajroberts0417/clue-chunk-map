@@ -49,6 +49,7 @@ const StashUnitTable: React.FC<{
                       className="stash-unit-icon"
                       src={stashIcons[type]}
                       aria-hidden
+                      alt={type}
                     />
                     <div>{type}</div>
                   </div>

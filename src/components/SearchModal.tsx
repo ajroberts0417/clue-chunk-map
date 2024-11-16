@@ -31,21 +31,21 @@ const searchClues = memo((query: string) => {
 
     const matchingClues = cluesOfDifficulty
       ? cluesOfDifficulty
-          .filter(
-            ({ clueHint }) =>
-              clueHint &&
-              clueHint.toLowerCase().includes(query) &&
-              !cluesOfEachDifficulty[difficulty].find(
-                (clue) => clue.clueHint === clueHint
-              )
-          )
-          .map((clue) => ({
-            ...clue,
-            alternateChunks: [
-              { x: chunk.x, y: chunk.y },
-              ...(clue.alternateChunks ? clue.alternateChunks : []),
-            ],
-          }))
+        .filter(
+          ({ clueHint }) =>
+            clueHint &&
+            clueHint.toLowerCase().includes(query) &&
+            !cluesOfEachDifficulty[difficulty].find(
+              (clue) => clue.clueHint === clueHint
+            )
+        )
+        .map((clue) => ({
+          ...clue,
+          alternateChunks: [
+            { x: chunk.x, y: chunk.y },
+            ...(clue.alternateChunks ? clue.alternateChunks : []),
+          ],
+        }))
       : [];
 
     return matchingClues;
@@ -120,26 +120,26 @@ const searchItems = memo((query: string) => {
 
     const matchingClues = cluesOfDifficulty
       ? cluesOfDifficulty
-          .filter(
-            ({ clueHint, itemsRequired }) =>
-              itemsRequired &&
-              itemsRequired.find((item) =>
-                item.toLowerCase().includes(query)
-              ) &&
-              !(
-                clueHint &&
-                cluesOfEachDifficulty[difficulty].find(
-                  (clue) => clue.clueHint === clueHint
-                )
+        .filter(
+          ({ clueHint, itemsRequired }) =>
+            itemsRequired &&
+            itemsRequired.find((item) =>
+              item.toLowerCase().includes(query)
+            ) &&
+            !(
+              clueHint &&
+              cluesOfEachDifficulty[difficulty].find(
+                (clue) => clue.clueHint === clueHint
               )
-          )
-          .map((clue) => ({
-            ...clue,
-            alternateChunks: [
-              { x: chunk.x, y: chunk.y },
-              ...(clue.alternateChunks ? clue.alternateChunks : []),
-            ],
-          }))
+            )
+        )
+        .map((clue) => ({
+          ...clue,
+          alternateChunks: [
+            { x: chunk.x, y: chunk.y },
+            ...(clue.alternateChunks ? clue.alternateChunks : []),
+          ],
+        }))
       : [];
 
     return matchingClues;
@@ -235,7 +235,7 @@ const SearchModal: React.FC<{ goToChunk: (x: number, y: number) => void }> = ({
     for (const [index, setter] of clueSetters.entries()) {
       setter(searchResults.cluesOfEachDifficulty[clueDifficulties[index]]);
     }
-  }, [debouncedClueQuery, debouncedItemQuery]);
+  }, [debouncedClueQuery, debouncedItemQuery, clueSetters]);
 
   // focus first input on modal open
   useEffect(() => {

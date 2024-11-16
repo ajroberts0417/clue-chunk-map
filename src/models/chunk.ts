@@ -1,4 +1,4 @@
-import type { Clue } from '.';
+import type { Clue, StashUnit } from '.';
 
 type Chunk = {
   x: number;
@@ -9,6 +9,7 @@ type Chunk = {
   hardClues?: Clue[];
   eliteClues?: Clue[];
   masterClues?: Clue[];
+  stashUnits?: StashUnit[];
 };
 
 export default Chunk;

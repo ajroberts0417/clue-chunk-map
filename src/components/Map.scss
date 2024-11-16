@@ -56,11 +56,47 @@
     }
   }
 
+  .chunk-stash-units {
+    display: none;
+
+    padding: 2px;
+
+    div {
+      position: relative;
+      display: none;
+
+      span {
+        display: none;
+
+        position: absolute;
+        top: 5px;
+        left: 10px;
+      }
+    }
+  }
+
+  &.show-stash-units .chunk-stash-units {
+    display: block;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+
+
   &.show-clue-counts .chunk-clues-and-counts span {
     display: block;
   }
 
   &.show-beginner-clues .chunk-clues-and-counts div.beginner {
+    display: inline-block;
+  }
+
+  &.show-stash-units .chunk-stash-units div.Bush,
+  &.show-stash-units .chunk-stash-units div.Crate,
+  &.show-stash-units .chunk-stash-units div.Hole,
+  &.show-stash-units .chunk-stash-units div.Rock {
     display: inline-block;
   }
 
@@ -93,6 +129,15 @@
     }
   }
 
+  // chunks with stash units
+  &.show-stash-units tr td.has-stash-units {
+    background: rgba(255, 255, 0, 0.4);
+
+    &:hover {
+      background: rgba(139, 139, 0, 0.5);
+    }
+  }
+
   &.hide-chunks-without-clues tr td.no-clues {
     background: #000000;
 
@@ -104,9 +149,7 @@
   }
 
   // unlocked chunks without clues
-  &.has-locked-chunks.highlight-chunks-without-clues
-    tr
-    td.no-clues:not(.locked),
+  &.has-locked-chunks.highlight-chunks-without-clues tr td.no-clues:not(.locked),
   &.has-locked-chunks.hide-chunks-without-clues tr td.no-clues:not(.locked) {
     background: none;
 
@@ -149,7 +192,7 @@
       &.locked {
         background: rgba(0, 0, 0, 0.6);
 
-        .chunk-tile > div {
+        .chunk-tile>div {
           background-color: transparent;
         }
       }
@@ -164,7 +207,7 @@
         width: 100%;
         height: 100%;
 
-        > div {
+        >div {
           display: inline-block;
           background-color: rgba(0, 0, 0, 0.6);
         }
@@ -205,7 +248,7 @@
       font-size: 20px;
     }
 
-    > div:not(:last-child) {
+    >div:not(:last-child) {
       margin-bottom: 6px;
     }
 
