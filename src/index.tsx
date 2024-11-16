@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ToastContainer } from 'react-toastify';
-import { library } from '@fortawesome/fontawesome-svg-core';
+import { IconDefinition, library } from '@fortawesome/fontawesome-svg-core';
 import {
   faArrowLeft,
   faArrowRight,
@@ -16,7 +16,7 @@ import reportWebVitals from './reportWebVitals';
 
 import './Styles.scss';
 
-library.add(faArrowLeft, faArrowRight, faQuestion, faSearch, faTimes);
+library.add(faArrowLeft as IconDefinition, faArrowRight as IconDefinition, faQuestion as IconDefinition, faSearch as IconDefinition, faTimes as IconDefinition);
 
 ReactDOM.render(
   <React.StrictMode>

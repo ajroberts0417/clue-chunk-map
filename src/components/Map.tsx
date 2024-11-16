@@ -111,6 +111,7 @@ const Map: React.FC = () => {
   const [showCoords, setShowCoords] = useState(false);
   const [showClues, setShowClues] = useState(true);
   const [showClueCounts, setShowClueCounts] = useState(true);
+  const [showStashUnits, setShowStashUnits] = useState(true);
   const [clueDifficultiesToShow, setClueDifficultiesToShow] = useState<{
     [difficulty: string]: boolean;
   }>({
@@ -157,6 +158,7 @@ const Map: React.FC = () => {
         showCoords,
         showClues,
         showClueCounts,
+        showStashUnits,
         clueDifficultiesToShow,
         highlightChunksWithoutClues,
         hideChunksWithoutClues,
@@ -167,6 +169,7 @@ const Map: React.FC = () => {
     showCoords,
     showClues,
     showClueCounts,
+    showStashUnits,
     clueDifficultiesToShow,
     highlightChunksWithoutClues,
     hideChunksWithoutClues,
@@ -261,6 +264,7 @@ const Map: React.FC = () => {
       setShowCoords(settings.showCoords);
       setShowClues(settings.showClues);
       setShowClueCounts(settings.showClueCounts);
+      setShowStashUnits(settings.showStashUnits);
       setClueDifficultiesToShow(settings.clueDifficultiesToShow);
       setHighlightChunksWithoutClues(settings.highlightChunksWithoutClues);
       setHideChunksWithoutClues(settings.hideChunksWithoutClues);
@@ -454,6 +458,7 @@ const Map: React.FC = () => {
             'show-coords': showCoords,
             'show-clues': showClues,
             'show-clue-counts': showClues && showClueCounts,
+            'show-stash-units': showStashUnits,
             ...Object.entries(clueDifficultiesToShow).reduce(
               (o, [difficulty, enabled]) => ({
                 ...o,
@@ -522,6 +527,15 @@ const Map: React.FC = () => {
                   onChange={(e) => setShowClues(e.target.checked)}
                 >
                   Show clues
+                </ToggleSwitch>
+              </div>
+
+              <div>
+                <ToggleSwitch
+                  checked={showStashUnits}
+                  onChange={(e) => setShowStashUnits(e.target.checked)}
+                >
+                  Show Stash Units
                 </ToggleSwitch>
               </div>
 

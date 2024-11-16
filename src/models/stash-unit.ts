@@ -7,4 +7,10 @@ type StashUnit = {
   alternateChunks?: { x: number; y: number }[];
 };
 
+export type StashChunk = {
+  x: number;
+  y: number;
+  stashUnits: StashUnit[];
+};
+
 export default StashUnit;

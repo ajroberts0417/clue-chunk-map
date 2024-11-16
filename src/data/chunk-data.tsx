@@ -2,7 +2,7 @@ import React, { createContext, ReactNode, useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 
 import type Chunk from '../models/chunk';
-import chunkJson from './chunk-data.json';
+import chunkJson from './chunk-data-with-stash-units.json';
 
 const ChunkDataContext = createContext<{
   exportChunkData: () => void;

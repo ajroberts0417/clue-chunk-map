@@ -16,6 +16,18 @@ type Clue = {
   }[];
 };
 
+export type ClueChunk = {
+  x: number;
+  y: number;
+  beginnerClues?: Clue[];
+  easyClues?: Clue[];
+  mediumClues?: Clue[];
+  hardClues?: Clue[];
+  eliteClues?: Clue[];
+  masterClues?: Clue[];
+};
+
+
 export default Clue;
 
 export type ClueDifficulty =

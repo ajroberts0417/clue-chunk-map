@@ -9,6 +9,7 @@ import {
 } from '../utils';
 import { ClueDifficulty, MapChunk } from '../models';
 import { ChunkDataContext } from '../data';
+import StashIcon from './StashIcon';
 
 const ChunkTile: React.FC<{
   mapChunk: MapChunk;
@@ -126,6 +127,7 @@ const ChunkTile: React.FC<{
       className={createClassString({
         'no-clues': !chunkHasClues(chunk || mapChunk),
         locked: !mapChunk.unlocked,
+        'has-stash-units': !!chunk?.stashUnits?.length,
       })}
       ref={tdRef}
     >
@@ -148,6 +150,16 @@ const ChunkTile: React.FC<{
                   <span className="clue-count">{count}</span>
                 </div>
               ))}
+          </div>
+          <div className="chunk-stash-units">
+            {chunk?.stashUnits?.map((stashUnit) => (
+              <div
+                className={stashUnit.type}
+                key={`stash-unit-${stashUnit.type}`}
+              >
+                <StashIcon type={stashUnit.type} />
+              </div>
+            ))}
           </div>
         </div>
       </div>
