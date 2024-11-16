@@ -523,19 +523,19 @@ const Map: React.FC = () => {
 
               <div>
                 <ToggleSwitch
-                  checked={showClues}
-                  onChange={(e) => setShowClues(e.target.checked)}
+                  checked={showStashUnits}
+                  onChange={(e) => setShowStashUnits(e.target.checked)}
                 >
-                  Show clues
+                  Show Stash Units
                 </ToggleSwitch>
               </div>
 
               <div>
                 <ToggleSwitch
-                  checked={showStashUnits}
-                  onChange={(e) => setShowStashUnits(e.target.checked)}
+                  checked={showClues}
+                  onChange={(e) => setShowClues(e.target.checked)}
                 >
-                  Show Stash Units
+                  Show clues
                 </ToggleSwitch>
               </div>
 
