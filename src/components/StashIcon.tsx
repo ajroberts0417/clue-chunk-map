@@ -1,5 +1,3 @@
-import { ClueDifficulty } from '../models';
-
 import bushStashIcon from '../images/icons/STASH_unit_(bush).png';
 import crateStashIcon from '../images/icons/STASH_unit_(crate).png';
 import holeStashIcon from '../images/icons/STASH_unit_(hole).png';

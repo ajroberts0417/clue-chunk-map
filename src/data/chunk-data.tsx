@@ -12,24 +12,25 @@ const ChunkDataContext = createContext<{
   setChunk: (x: number, y: number, chunk: Chunk) => void;
 }>(null as any);
 
+function coords(x: number, y: number): string {
+  return `${x},${y}`;
+}
+
+function chunkArrayToMap(chunks: Chunk[]) {
+  const chunkMap = new Map<string, Chunk>();
+
+  for (const chunk of chunks) {
+    chunkMap.set(coords(chunk.x, chunk.y), chunk);
+  }
+
+  return chunkMap;
+}
+
 const ChunkDataProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const LOCAL_STORAGE_KEY = 'CHUNKS';
 
   const [chunkData, setChunkData] = useState(chunkArrayToMap(chunkJson));
 
-  function coords(x: number, y: number): string {
-    return `${x},${y}`;
-  }
-
-  function chunkArrayToMap(chunks: Chunk[]) {
-    const chunkMap = new Map<string, Chunk>();
-
-    for (const chunk of chunks) {
-      chunkMap.set(coords(chunk.x, chunk.y), chunk);
-    }
-
-    return chunkMap;
-  }
 
   function chunkMapToArray() {
     return Array.from(chunkData.values());
@@ -67,18 +68,18 @@ const ChunkDataProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     localStorage.setItem(LOCAL_STORAGE_KEY, json);
   }
 
-  function loadChunkDataFromLocalStorage() {
-    const json = localStorage.getItem(LOCAL_STORAGE_KEY) as string;
-    const chunks = JSON.parse(json);
-    setChunkData(chunkArrayToMap(chunks));
-  }
-
   function clearLocalStorageChunkData() {
     localStorage.removeItem(LOCAL_STORAGE_KEY);
     setChunkData(chunkArrayToMap(chunkJson));
   }
 
   useEffect(() => {
+    function loadChunkDataFromLocalStorage() {
+      const json = localStorage.getItem(LOCAL_STORAGE_KEY) as string;
+      const chunks = JSON.parse(json);
+      setChunkData(chunkArrayToMap(chunks));
+    }
+
     if (localStorage.getItem(LOCAL_STORAGE_KEY)) {
       loadChunkDataFromLocalStorage();
       toast('📂 Local chunk data loaded!', { type: 'info' });

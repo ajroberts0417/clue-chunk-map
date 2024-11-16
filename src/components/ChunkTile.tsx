@@ -38,66 +38,67 @@ const ChunkTile: React.FC<{
     initialTouchRef.current = t;
   };
 
-  function resetMouseState() {
-    setMoveDistance(0);
-    setInitialTouch({ x: 0, y: 0 });
-    setMouseDown(false);
-  }
-
-  function mouseDownHandler(e: MouseEvent | TouchEvent) {
-    const mobilePress = e.type === 'touchstart';
-
-    // if the left mouse button was pressed
-    if (mobilePress || (e as MouseEvent).button === 0) {
-      if (mobilePress) {
-        const touch = (e as TouchEvent).touches[0];
-        setInitialTouch({ x: touch.pageX, y: touch.pageY });
-      }
-      setMouseDown(true);
-    }
-  }
-
-  function mouseUpHandler(e: MouseEvent | TouchEvent) {
-    // if the left mouse button was released
-    if (
-      mouseDownRef.current &&
-      (e.type === 'touchend' || (e as MouseEvent).button === 0)
-    ) {
-      // only trigger `onClick` when the user isn't moving the map
-      if (onClick && moveDistanceRef.current <= 10) {
-        onClick();
-      }
-
-      resetMouseState();
-    }
-  }
-
-  function mouseMoveHandler(e: MouseEvent | TouchEvent) {
-    // do nothing if the left mouse button isn't held down
-    if (!mouseDownRef.current) return;
-
-    function distance(a: number, b: number) {
-      return Math.sqrt(a * a + b * b);
-    }
-
-    if (e.type === 'mousemove') {
-      const mouseEvent = e as MouseEvent;
-
-      const a = mouseEvent.movementX;
-      const b = mouseEvent.movementY;
-
-      setMoveDistance(moveDistanceRef.current + distance(a, b));
-    } else if (e.type === 'touchmove') {
-      const touch = (e as TouchEvent).touches[0];
-
-      const a = touch.pageX - initialTouchRef.current.x;
-      const b = touch.pageY - initialTouchRef.current.y;
-
-      setMoveDistance(distance(a, b));
-    }
-  }
-
   useEffect(() => {
+
+    function resetMouseState() {
+      setMoveDistance(0);
+      setInitialTouch({ x: 0, y: 0 });
+      setMouseDown(false);
+    }
+
+    function mouseDownHandler(e: MouseEvent | TouchEvent) {
+      const mobilePress = e.type === 'touchstart';
+
+      // if the left mouse button was pressed
+      if (mobilePress || (e as MouseEvent).button === 0) {
+        if (mobilePress) {
+          const touch = (e as TouchEvent).touches[0];
+          setInitialTouch({ x: touch.pageX, y: touch.pageY });
+        }
+        setMouseDown(true);
+      }
+    }
+
+    function mouseUpHandler(e: MouseEvent | TouchEvent) {
+      // if the left mouse button was released
+      if (
+        mouseDownRef.current &&
+        (e.type === 'touchend' || (e as MouseEvent).button === 0)
+      ) {
+        // only trigger `onClick` when the user isn't moving the map
+        if (onClick && moveDistanceRef.current <= 10) {
+          onClick();
+        }
+
+        resetMouseState();
+      }
+    }
+
+    function mouseMoveHandler(e: MouseEvent | TouchEvent) {
+      // do nothing if the left mouse button isn't held down
+      if (!mouseDownRef.current) return;
+
+      function distance(a: number, b: number) {
+        return Math.sqrt(a * a + b * b);
+      }
+
+      if (e.type === 'mousemove') {
+        const mouseEvent = e as MouseEvent;
+
+        const a = mouseEvent.movementX;
+        const b = mouseEvent.movementY;
+
+        setMoveDistance(moveDistanceRef.current + distance(a, b));
+      } else if (e.type === 'touchmove') {
+        const touch = (e as TouchEvent).touches[0];
+
+        const a = touch.pageX - initialTouchRef.current.x;
+        const b = touch.pageY - initialTouchRef.current.y;
+
+        setMoveDistance(distance(a, b));
+      }
+    }
+
     const tdEl = tdRef.current;
     if (!tdEl) return;
 
@@ -117,7 +118,7 @@ const ChunkTile: React.FC<{
     tdEl.addEventListener('touchmove', mouseMoveHandler);
 
     tdEl.addEventListener('touchcancel', resetMouseState);
-  }, [tdRef]);
+  }, [tdRef, onClick]);
 
   // get clue counts
   const clueCounts = clueCountsForChunk(chunk || mapChunk);

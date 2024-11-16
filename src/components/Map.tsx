@@ -195,7 +195,7 @@ const Map: React.FC = () => {
       clearInterval(autoSaveInterval);
       setAutoSaveInterval(undefined);
     }
-  }, [editMode, autoSaveInterval]);
+  }, [editMode, autoSaveInterval, saveChunkDataToLocalStorage]);
 
   // when map chunk is selected or deselected
   useEffect(() => {
@@ -225,7 +225,7 @@ const Map: React.FC = () => {
       .map((chunk) => ({ x: chunk.x, y: chunk.y }));
 
     localStorage.setItem(UNLOCKED_CHUNKS_KEY, JSON.stringify(unlocked));
-  }, [mapChunks]);
+  }, [mapChunks, allChunksUnlocked]);
 
   // show info modal (if it's the first time opening the app)
   useEffect(() => {

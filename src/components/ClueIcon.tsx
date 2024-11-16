@@ -19,7 +19,7 @@ const ClueIcon: React.FC<{
     Master: masterClueIcon,
   };
 
-  return <img src={icons[difficulty]} aria-hidden />;
+  return <img src={icons[difficulty]} aria-hidden alt={difficulty} />;
 };
 
 export default ClueIcon;

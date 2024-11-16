@@ -15,7 +15,7 @@ const ClueTable: React.FC<{
 
   const ClueHint = ({ hint }: { hint: string | undefined }) => {
     return hint && hint.startsWith('http') ? (
-      <img src={hint} />
+      <img src={hint} alt={hint} />
     ) : (
       <span className="clue-hint">{hint}</span>
     );
