@@ -212,17 +212,16 @@ const SearchModal: React.FC<{ goToChunk: (x: number, y: number) => void }> = ({
   const [eliteClues, setEliteClues] = useState<Clue[]>([]);
   const [masterClues, setMasterClues] = useState<Clue[]>([]);
 
-  // setters for difficulties
-  const clueSetters = [
-    setBeginnerClues,
-    setEasyClues,
-    setMediumClues,
-    setHardClues,
-    setEliteClues,
-    setMasterClues,
-  ];
 
   useEffect(() => {
+    const clueSetters = [
+      setBeginnerClues,
+      setEasyClues,
+      setMediumClues,
+      setHardClues,
+      setEliteClues,
+      setMasterClues,
+    ];
     // do the search
     const searchResults = debouncedItemQuery
       ? searchItems(debouncedItemQuery.toLowerCase().trim())
@@ -235,7 +234,7 @@ const SearchModal: React.FC<{ goToChunk: (x: number, y: number) => void }> = ({
     for (const [index, setter] of clueSetters.entries()) {
       setter(searchResults.cluesOfEachDifficulty[clueDifficulties[index]]);
     }
-  }, [debouncedClueQuery, debouncedItemQuery, clueSetters]);
+  }, [debouncedClueQuery, debouncedItemQuery]);
 
   // focus first input on modal open
   useEffect(() => {
